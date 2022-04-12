@@ -154,6 +154,7 @@ export class ReadAlongComponent {
         }
       }
     }
+    this.toggleMenuOff();
   }
 
   @Listen('contextmenu', { target: 'window' })
@@ -794,11 +795,11 @@ export class ReadAlongComponent {
 
     wavesurfer.on('pause', () => {
       this.playing = false;
+      this.el.shadowRoot.querySelectorAll(".reading").forEach(x => x.classList.remove('reading'));
     })
     wavesurfer.on('finish', () => {
       this.stop();
       this.playing = false;
-
     })
 
     this.wavesurfer = wavesurfer;
