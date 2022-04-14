@@ -1463,19 +1463,22 @@ export class ReadAlongComponent {
   </div>
 
   StyleControl = (): Element => <button aria-label="Change theme" onClick={this.changeTheme}
-    class={"control-panel__control ripple theme--" + this.theme + " background--" + this.theme}>
+    class={"tooltip control-panel__control ripple theme--" + this.theme + " background--" + this.theme}>
     <i class="material-icons-outlined">style</i>
+    <span class="tooltiptext right">Change theme</span>
   </button>
 
   FullScreenControl = (): Element => <button aria-label="Full screen mode" onClick={() => this.toggleFullscreen()}
-    class={"control-panel__control ripple theme--" + this.theme + " background--" + this.theme}>
+    class={"tooltip control-panel__control ripple theme--" + this.theme + " background--" + this.theme}>
     <i class="material-icons" aria-label="Full screen mode">{this.fullscreen ? 'fullscreen_exit' : 'fullscreen'}</i>
+    <span class="tooltiptext right">Toogle screen mode</span>
   </button>
 
   TextTranslationDisplayControl = (): Element => <button data-cy="translation-toggle" aria-label="Toggle Translation"
     onClick={() => this.toggleTextTranslation()}
-    class={"control-panel__control ripple theme--" + this.theme + " background--" + this.theme}>
+    class={"tooltip control-panel__control ripple theme--" + this.theme + " background--" + this.theme}>
     <i class="material-icons-outlined">subtitles</i>
+    <span class="tooltiptext right">Toggle translation</span>
   </button>
 
   ControlPanel = (): Element => <div data-cy="control-panel"

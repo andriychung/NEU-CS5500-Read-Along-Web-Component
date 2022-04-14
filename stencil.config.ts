@@ -11,6 +11,7 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
       copy: [
         { src: 'scss/fonts', dest: 'build/assets/fonts' },
+        { src: '../test-data', dest: 'assets/test-data' },
       ]
     },
     {
